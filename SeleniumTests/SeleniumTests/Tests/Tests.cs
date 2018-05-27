@@ -12,19 +12,16 @@ using System.Collections.Generic;
 namespace SeleniumTests
 {
     [TestFixture]
-    public class Tests : TestBase
+    public class Tests : AuthBase
     {
         [Test]
         public void CreateNewGroup()
         {
-            //AccountData user = new AccountData("admin", "secret");
             GroupData group1 = new GroupData("newgroup1", "header", "footer");
-            app.Navigation.OpenHomePage();
-            //app.Auth.Login(user);
             app.Navigation.OpenGroupsPage();
             app.Group.CreateNewGroup(group1);
             app.Navigation.OpenGroupsPage();
-            app.Group.FindLastCreatedGroup();
+            app.Group.SelectGroupByValue(app.Group.FindLastCreatedGroup());
             app.Group.OpenGroup();
             GroupData newgroup = app.Group.GetCreatedGroupData();
             app.Auth.Logout();
@@ -37,10 +34,7 @@ namespace SeleniumTests
         [Test]
         public void CreateNewContact()
         {
-            AccountData user = new AccountData("admin", "secret");
             ContactData contact1 = new ContactData("Test", "Test", "Testovich", "Testik");
-            app.Navigation.OpenHomePage();
-            app.Auth.Login(user);
             app.Contact.CreateNewContact(contact1);
             app.Contact.Wait(3000);
             app.Contact.OpenLastCreatedContact();
@@ -55,9 +49,6 @@ namespace SeleniumTests
         [Test]
         public void DeleteLastContact()
         {
-            AccountData user = new AccountData("admin", "secret");
-            app.Navigation.OpenHomePage();
-            app.Auth.Login(user);
             if (app.Contact.IsElementPresent(By.Name("entry")) != true)
             {
                 app.Contact.CreateNewContact(new ContactData("FirstName", "MiddleName", "LastName", "NickName"));
@@ -74,9 +65,6 @@ namespace SeleniumTests
         [Test]
         public void DeleteLastGroup()
         {
-            AccountData user = new AccountData("admin", "secret");
-            app.Navigation.OpenHomePage();
-            app.Auth.Login(user);
             app.Navigation.OpenGroupsPage();
             if (app.Group.IsElementPresent(By.ClassName("group")) == false)
             {
@@ -94,10 +82,6 @@ namespace SeleniumTests
         [Test]
         public void EditLastGroup()
         {
-            AccountData user = new AccountData("admin", "secret");
-            
-            app.Navigation.OpenHomePage();
-            app.Auth.Login(user);
             app.Navigation.OpenGroupsPage();
             if (app.Group.IsElementPresent(By.ClassName("group")) == false)
             {
@@ -125,10 +109,6 @@ namespace SeleniumTests
         [Test]
         public void EditLastContact()
         {
-            
-            AccountData user = new AccountData("admin", "secret");
-            app.Navigation.OpenHomePage();
-            app.Auth.Login(user);
             app.Navigation.OpenHomePage();
             if (app.Contact.IsElementPresent(By.Name("entry")) != true)
             {

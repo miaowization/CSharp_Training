@@ -53,8 +53,6 @@ namespace SeleniumTests
             {
                 if (values[i] > value) value = values[i];
             }
-
-            
             return value;
         }
 

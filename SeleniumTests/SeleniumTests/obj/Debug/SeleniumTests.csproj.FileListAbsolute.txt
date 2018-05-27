@@ -8,3 +8,13 @@ c:\users\aigul\documents\visual studio 2013\Projects\SeleniumTests\SeleniumTests
 c:\users\aigul\documents\visual studio 2013\Projects\SeleniumTests\SeleniumTests\bin\Debug\WebDriver.Support.xml
 c:\users\aigul\documents\visual studio 2013\Projects\SeleniumTests\SeleniumTests\obj\Debug\SeleniumTests.dll
 c:\users\aigul\documents\visual studio 2013\Projects\SeleniumTests\SeleniumTests\obj\Debug\SeleniumTests.pdb
+C:\Users\Aigul\Documents\GitHub\CSharp_Training\SeleniumTests\SeleniumTests\bin\Debug\SeleniumTests.dll
+C:\Users\Aigul\Documents\GitHub\CSharp_Training\SeleniumTests\SeleniumTests\bin\Debug\SeleniumTests.pdb
+C:\Users\Aigul\Documents\GitHub\CSharp_Training\SeleniumTests\SeleniumTests\bin\Debug\nunit.framework.dll
+C:\Users\Aigul\Documents\GitHub\CSharp_Training\SeleniumTests\SeleniumTests\bin\Debug\WebDriver.dll
+C:\Users\Aigul\Documents\GitHub\CSharp_Training\SeleniumTests\SeleniumTests\bin\Debug\WebDriver.Support.dll
+C:\Users\Aigul\Documents\GitHub\CSharp_Training\SeleniumTests\SeleniumTests\bin\Debug\nunit.framework.xml
+C:\Users\Aigul\Documents\GitHub\CSharp_Training\SeleniumTests\SeleniumTests\bin\Debug\WebDriver.xml
+C:\Users\Aigul\Documents\GitHub\CSharp_Training\SeleniumTests\SeleniumTests\bin\Debug\WebDriver.Support.xml
+C:\Users\Aigul\Documents\GitHub\CSharp_Training\SeleniumTests\SeleniumTests\obj\Debug\SeleniumTests.dll
+C:\Users\Aigul\Documents\GitHub\CSharp_Training\SeleniumTests\SeleniumTests\obj\Debug\SeleniumTests.pdb

@@ -13,9 +13,10 @@ namespace SeleniumTests
 {
     public class NavigationHelper:HelperBase
     {
+        private string baseURL;
         public NavigationHelper(AppManager manager, string baseURL) : base(manager) 
         {
-            
+            this.baseURL = baseURL;
         }
 
         public void OpenHomePage()
@@ -25,7 +26,6 @@ namespace SeleniumTests
 
         public void OpenGroupsPage()
         {
-            
             Click(GroupsButton);
         }
     }
