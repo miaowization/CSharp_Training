@@ -42,6 +42,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Serialization" />
     <Reference Include="WebDriver, Version=3.9.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Selenium.WebDriver.3.9.1\lib\net45\WebDriver.dll</HintPath>
@@ -67,6 +69,7 @@
     <Compile Include="Data\AccountData.cs" />
     <Compile Include="AppManager.cs" />
     <Compile Include="Data\ContactData.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="Helpers\ContactHelper.cs" />
     <Compile Include="Data\GroupData.cs" />
     <Compile Include="Helpers\GroupHelper.cs" />
@@ -86,6 +89,9 @@
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Settings.xml" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

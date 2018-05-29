@@ -11,17 +11,21 @@ using System.Collections.Generic;
 
 namespace SeleniumTests
 {
-    class LoginTests
+    class LoginTests : TestBase
     {
         [Test]
         public void LoginWithValidData()
         {
-
+            AccountData user = new AccountData("admin", "secret");
+            app.Auth.Login(user);
+            Assert.True(app.Auth.IsLoggedIn(user.Username));
         }
         [Test]
         public void LoginWithInvalidData()
         {
-
+            AccountData user = new AccountData("admin", "admin");
+            app.Auth.Login(user);
+            Assert.False(app.Auth.IsLoggedIn());
         }
     }
 }

@@ -23,6 +23,10 @@ namespace SeleniumTests
         private ContactHelper contact;
         private GroupHelper group;
         private LoginHelper auth;
+        private Settings settings;
+        private string login;
+        private string password;
+
 
         public static AppManager GetInstance()
         {
@@ -34,16 +38,36 @@ namespace SeleniumTests
             }
             return app.Value;
         }
+
         private AppManager()
         {
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
-            baseURL = "http://localhost";
+            baseURL = Settings.BaseURL;
+            login = Settings.Login;
+            password = Settings.Password;
             verificationErrors = new StringBuilder();
             group = new GroupHelper(this);
             contact = new ContactHelper(this);
             auth = new LoginHelper(this);
             navigation = new NavigationHelper(this, baseURL);
+            settings = new Settings();
+
+        }
+
+        public string Login
+        {
+            get
+            {
+                return login;
+            }
+        }
+        public string Password
+        {
+            get
+            {
+                return password;
+            }
         }
 
         public void Stop()
@@ -61,6 +85,13 @@ namespace SeleniumTests
             }
         }
 
+        public Settings Settings
+        {
+            get
+            {
+                return settings;
+            }
+        }
         public NavigationHelper Navigation
         {
             get

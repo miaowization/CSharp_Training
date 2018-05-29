@@ -13,7 +13,7 @@ namespace SeleniumTests
         [SetUp]
         public void SetupTest()
         {
-            AccountData user = new AccountData("admin", "secret");
+            AccountData user = new AccountData(app.Login, app.Password);
             app = AppManager.GetInstance();
             app.Navigation.OpenHomePage();
             app.Auth.Login(user);
